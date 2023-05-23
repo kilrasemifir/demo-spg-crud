@@ -1,0 +1,18 @@
+spring:
+  datasource:
+    # jdbc:<nom driver>:<url>:<nom bdd>
+    # pour du mysql : jdbc:mysql://localhost:3306/madb
+    # pour du postgres en distant sur l'ip x.x.x.x : jdbc:postgresql://x.x.x.x:5432/madb
+    # Ici avec h2 ce n'est pas nécessaire de créer la base de données, elle est créée en mémoire
+#    url: jdbc:h2:mem:madb
+#    username: root
+#    password: root
+  # Confiuration de la base de données H2
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true

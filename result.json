@@ -1,0 +1,45 @@
+{
+  "nom": "A",
+  "membres": [
+    {
+      "nom": "Doe",
+      "prenom": "John",
+      "equipes": [
+        {
+          "nom": "A",
+          "membres": [
+            {
+              "nom": "Doe",
+              "prenom": "John",
+              "equipes": [
+                {
+                  "nom": "A",
+                  "membres": [
+                    {
+                      "nom": "Doe",
+                      "prenom": "John",
+                      "equipes": [
+                        {
+                          "nom": "A",
+                          "membres": [
+                            {
+                              "nom": "Doe",
+                              "prenom": "John",
+                              "equipes": [
+
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
