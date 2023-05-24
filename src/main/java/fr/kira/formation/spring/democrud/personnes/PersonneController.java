@@ -3,6 +3,8 @@ package fr.kira.formation.spring.democrud.personnes;
 import fr.kira.formation.spring.democrud.personnes.dto.MinimalPersonneDTO;
 import io.swagger.annotations.Api;
 import io.swagger.v3.oas.annotations.Operation;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.context.annotation.Profile;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
@@ -10,6 +12,7 @@ import java.util.List;
 import java.util.Optional;
 
 
+@Slf4j
 @RestController
 @RequestMapping("/personnes")
 public class PersonneController {
@@ -18,6 +21,11 @@ public class PersonneController {
 
     public PersonneController(PersonneService service) {
         this.service = service;
+        log.trace("PersonneController TRACE");
+        log.debug("PersonneController DEBUG");
+        log.info("PersonneController INFO");
+        log.warn("PersonneController WARN");
+        log.error("PersonneController ERROR");
     }
 
     @Operation(description = "Retourne la liste des personnes dans un format minimal")

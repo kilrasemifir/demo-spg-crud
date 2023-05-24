@@ -4,6 +4,12 @@ spring:
       # Charge la variable d'environnement APP_PROFILE
       # et si elle n'existe pas, prend la valeur dev
       - ${APP_PROFILE:dev}
-server:
-  port: ${API_PORT:8080}
 
+server:
+  port: 8080
+
+logging:
+  level:
+    root: INFO
+    fr.kira.formation.spring.democrud: DEBUG
+    fr.kira.formation.spring.democrud.personnes: TRACE

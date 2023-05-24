@@ -6,11 +6,13 @@ import fr.kira.formation.spring.democrud.equipes.EquipeService;
 import fr.kira.formation.spring.democrud.personnes.Personne;
 import fr.kira.formation.spring.democrud.personnes.PersonneRepository;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Profile;
 
 import javax.annotation.PostConstruct;
 import java.time.LocalDate;
 import java.util.*;
 
+@Profile("dev")
 @Configuration
 public class InitConfiguration {
 

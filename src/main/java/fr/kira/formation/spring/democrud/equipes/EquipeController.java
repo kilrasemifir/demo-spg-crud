@@ -1,6 +1,8 @@
 package fr.kira.formation.spring.democrud.equipes;
 
 import fr.kira.formation.spring.democrud.equipes.dto.EquipeMinimalMembreDTO;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
@@ -10,10 +12,17 @@ import java.util.List;
 @RequestMapping("equipes")
 public class EquipeController {
 
+    private static final Logger LOGGER = LoggerFactory.getLogger(EquipeController.class);
+
     private final EquipeService service;
 
     public EquipeController(EquipeService service) {
         this.service = service;
+        LOGGER.trace("EquipeController TRACE");
+        LOGGER.debug("EquipeController DEBUG");
+        LOGGER.info("EquipeController INFO");
+        LOGGER.warn("EquipeController WARN");
+        LOGGER.error("EquipeController ERROR");
     }
 
     @GetMapping("")
