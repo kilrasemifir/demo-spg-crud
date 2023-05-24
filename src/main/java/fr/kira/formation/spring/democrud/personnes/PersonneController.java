@@ -1,5 +1,6 @@
 package fr.kira.formation.spring.democrud.personnes;
 
+import fr.kira.formation.spring.democrud.personnes.dto.MinimalPersonneDTO;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
@@ -17,7 +18,7 @@ public class PersonneController {
     }
 
     @GetMapping("")
-    public List<Personne> findAll() {
+    public List<MinimalPersonneDTO> findAll() {
         return service.findAll();
     }
 

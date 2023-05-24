@@ -1,5 +1,6 @@
 package fr.kira.formation.spring.democrud.equipes;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import fr.kira.formation.spring.democrud.personnes.Personne;
 import lombok.Getter;

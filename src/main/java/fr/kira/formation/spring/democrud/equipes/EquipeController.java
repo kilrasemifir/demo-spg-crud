@@ -1,11 +1,10 @@
 package fr.kira.formation.spring.democrud.equipes;
 
+import fr.kira.formation.spring.democrud.equipes.dto.EquipeMinimalMembreDTO;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
-import javax.swing.text.html.Option;
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 @RequestMapping("equipes")
@@ -18,7 +17,7 @@ public class EquipeController {
     }
 
     @GetMapping("")
-    public List<Equipe> findAll() {
+    public List<EquipeMinimalMembreDTO> findAll() {
         return service.findAll();
     }
 

@@ -36,6 +36,9 @@ public class Personne {
     @Column(name = "date_naissance", nullable = false)
     private LocalDate dateNaissance;
 
+    @Column
+    private String password;
+
 //    @JsonIgnore
     @ManyToMany(mappedBy = "membres") // Définit le nom de la propriété dans la classe Equipe
     private List<Equipe> equipes;

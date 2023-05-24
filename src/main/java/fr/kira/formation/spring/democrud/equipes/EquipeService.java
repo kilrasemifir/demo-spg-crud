@@ -1,10 +1,13 @@
 package fr.kira.formation.spring.democrud.equipes;
 
+import fr.kira.formation.spring.democrud.equipes.dto.EquipeMinimalMembreDTO;
+import fr.kira.formation.spring.democrud.equipes.dto.mappers.EquipeMapper;
 import fr.kira.formation.spring.democrud.equipes.exceptions.DuplicateMembreException;
 import fr.kira.formation.spring.democrud.equipes.exceptions.EquipeNotFoundException;
 import fr.kira.formation.spring.democrud.equipes.exceptions.MembreNotFoundException;
 import fr.kira.formation.spring.democrud.personnes.Personne;
 import fr.kira.formation.spring.democrud.personnes.PersonneService;
+import fr.kira.formation.spring.democrud.personnes.dto.MinimalPersonneDTO;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -13,14 +16,19 @@ import java.util.List;
 public class EquipeService {
     private final EquipeRepository repository;
     private final PersonneService personneService;
+    private final EquipeMapper mapper;
 
-    public EquipeService(EquipeRepository repository, PersonneService personneService) {
+    public EquipeService(EquipeRepository repository, PersonneService personneService, EquipeMapper mapper) {
         this.repository = repository;
         this.personneService = personneService;
+        this.mapper = mapper;
     }
 
-    public List<Equipe> findAll() {
-        return repository.findAll();
+    public List<EquipeMinimalMembreDTO> findAll() {
+        return repository.findAll().stream()
+                // equipe -> mapper.convertToEquipeMinimalMembre(equipe)
+                .map(mapper::convertToEquipeMinimalMembre)
+                .toList();// java15 et moins collect(Collectors.toList());
     }
 
     public Equipe save(Equipe entity) {
