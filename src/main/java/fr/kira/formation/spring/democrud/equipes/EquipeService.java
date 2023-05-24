@@ -8,10 +8,12 @@ import fr.kira.formation.spring.democrud.equipes.exceptions.MembreNotFoundExcept
 import fr.kira.formation.spring.democrud.personnes.Personne;
 import fr.kira.formation.spring.democrud.personnes.PersonneService;
 import fr.kira.formation.spring.democrud.personnes.dto.MinimalPersonneDTO;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Slf4j
 @Service
 public class EquipeService {
     private final EquipeRepository repository;
@@ -32,15 +34,20 @@ public class EquipeService {
     }
 
     public Equipe save(Equipe entity) {
+        log.info("Sauvegarde d'une équipe. entity={}", entity);
         return repository.save(entity);
     }
 
     public Equipe findById(Long id) {
-        return repository.findById(id).orElseThrow(()->new EquipeNotFoundException(id));
+        return repository.findById(id).orElseThrow(()->{
+            log.warn("Recherche d'une équipe avec un id inconnu. id={}", id);
+            return new EquipeNotFoundException(id);
+        });
     }
 
-    public void deleteById(Long aLong) {
-        repository.deleteById(aLong);
+    public void deleteById(Long id) {
+        log.warn("Suppression d'une équipe avec un id inconnu. id={}", id);
+        repository.deleteById(id);
     }
 
     public Equipe update(Long id, Equipe entity) {

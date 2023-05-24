@@ -3,7 +3,7 @@ spring:
     active:
       # Charge la variable d'environnement APP_PROFILE
       # et si elle n'existe pas, prend la valeur dev
-      - ${APP_PROFILE:dev}
+      - dev #${APP_PROFILE:dev}
 
 server:
   port: 8080
