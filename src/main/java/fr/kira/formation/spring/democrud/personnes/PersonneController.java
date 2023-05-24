@@ -1,11 +1,14 @@
 package fr.kira.formation.spring.democrud.personnes;
 
 import fr.kira.formation.spring.democrud.personnes.dto.MinimalPersonneDTO;
+import io.swagger.annotations.Api;
+import io.swagger.v3.oas.annotations.Operation;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
+
 
 @RestController
 @RequestMapping("/personnes")
@@ -17,6 +20,7 @@ public class PersonneController {
         this.service = service;
     }
 
+    @Operation(description = "Retourne la liste des personnes dans un format minimal")
     @GetMapping("")
     public List<MinimalPersonneDTO> findAll() {
         return service.findAll();
