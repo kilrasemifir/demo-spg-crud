@@ -49,7 +49,7 @@ public class EquipeController {
     }
 
     @DeleteMapping("{idEquipe}/membres/{idPersonne}")
-    public void deleteMembre(@PathVariable Long idEquipe, @PathVariable Long idPersonne){
-
+    public void removeMembre(@PathVariable Long idEquipe, @PathVariable Long idPersonne){
+        this.service.removeMembre(idEquipe, idPersonne);
     }
 }

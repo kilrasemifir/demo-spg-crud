@@ -2,6 +2,7 @@ package fr.kira.formation.spring.democrud.equipes;
 
 import fr.kira.formation.spring.democrud.equipes.exceptions.DuplicateMembreException;
 import fr.kira.formation.spring.democrud.equipes.exceptions.EquipeNotFoundException;
+import fr.kira.formation.spring.democrud.equipes.exceptions.MembreNotFoundException;
 import fr.kira.formation.spring.democrud.personnes.Personne;
 import fr.kira.formation.spring.democrud.personnes.PersonneService;
 import org.springframework.stereotype.Service;
@@ -51,6 +52,16 @@ public class EquipeService {
             throw new DuplicateMembreException(idPersonne);
         }
         equipe.getMembres().add(personne);
+        this.save(equipe);
+    }
+
+    public void removeMembre(long idEquipe, long idPersonne){
+        Equipe equipe = this.findById(idEquipe);
+        Personne personne = this.personneService.findById(idPersonne);
+        if (!equipe.getMembres().contains(personne)){
+            throw new MembreNotFoundException("La personne d'id "+idPersonne+" n'est pas membre de l'équipe d'id "+idEquipe);
+        }
+        equipe.getMembres().remove(personne);
         this.save(equipe);
     }
 }
