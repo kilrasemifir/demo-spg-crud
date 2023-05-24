@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.3.0](https://github.com/kilrasemifir/demo-spg-crud/compare/v1.2.0...v1.3.0) (2023-05-24)
+
+
+### Features
+
+* ajout de l'aop ([2fceda5](https://github.com/kilrasemifir/demo-spg-crud/commit/2fceda53fe7055ea87f688d4828ea8de4ba9fde1))
+* ajout de logs dans le service des equipes ([be726ff](https://github.com/kilrasemifir/demo-spg-crud/commit/be726ff3fafdce4ea11f5eb73fc1dc69ed2cd8ed))
+* ajout des logs ([260d646](https://github.com/kilrasemifir/demo-spg-crud/commit/260d646baf775ceca0431484229991f25f96d422))
+* mise en place des profiles ([82d71d8](https://github.com/kilrasemifir/demo-spg-crud/commit/82d71d8111a112136d787f3ce757c7e8cd638b90))
+
 ## [1.2.0](https://github.com/kilrasemifir/demo-spg-crud/compare/v1.1.0...v1.2.0) (2023-05-24)
 
 
