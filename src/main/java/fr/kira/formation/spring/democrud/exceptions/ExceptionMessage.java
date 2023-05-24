@@ -1,4 +1,4 @@
-package fr.kira.formation.spring.democrud;
+package fr.kira.formation.spring.democrud.exceptions;
 
 import lombok.Data;
 

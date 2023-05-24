@@ -9,6 +9,7 @@ import lombok.ToString;
 
 import javax.persistence.*;
 import java.util.List;
+import java.util.Set;
 
 @Entity
 @Getter
@@ -32,9 +33,9 @@ public class Equipe {
             joinColumns = @JoinColumn(name="equipe_id"),
             inverseJoinColumns = @JoinColumn(name="membre_id")
     ) // Décrit la table de jointure pour la relation entre les équipes et les personnes
-    private List<Personne> membres;
+    private Set<Personne> membres;
 
-    public Equipe(String nom, String description, List<Personne> membres) {
+    public Equipe(String nom, String description, Set<Personne> membres) {
         this.nom = nom;
         this.description = description;
         this.membres = membres;

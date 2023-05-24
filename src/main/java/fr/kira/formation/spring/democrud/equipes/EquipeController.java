@@ -1,5 +1,6 @@
 package fr.kira.formation.spring.democrud.equipes;
 
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import javax.swing.text.html.Option;
@@ -27,7 +28,7 @@ public class EquipeController {
     }
 
     @GetMapping("{id}")
-    public Optional<Equipe> findById(@PathVariable Long id) {
+    public Equipe findById(@PathVariable Long id) {
         return service.findById(id);
     }
 
@@ -41,4 +42,14 @@ public class EquipeController {
         return service.update(id, entity);
     }
 
+    @ResponseStatus(HttpStatus.ACCEPTED)
+    @PutMapping("{idEquipe}/membres/{idPersonne}")
+    public void addMembre(@PathVariable Long idEquipe, @PathVariable Long idPersonne){
+        this.service.addMembre(idEquipe, idPersonne);
+    }
+
+    @DeleteMapping("{idEquipe}/membres/{idPersonne}")
+    public void deleteMembre(@PathVariable Long idEquipe, @PathVariable Long idPersonne){
+
+    }
 }

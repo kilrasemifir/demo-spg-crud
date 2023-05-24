@@ -1,8 +1,7 @@
 package fr.kira.formation.spring.democrud.personnes;
 
-import org.springframework.http.HttpStatus;
+import fr.kira.formation.spring.democrud.exceptions.NotFoundException;
 import org.springframework.stereotype.Service;
-import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
 import java.util.Optional;
@@ -26,7 +25,7 @@ public class PersonneService {
 
     public Personne findById(Long id) {
         Optional<Personne> personne = personneRepository.findById(id);
-        return personne.orElseThrow(() -> new PersonneNotFoundException(id));
+        return personne.orElseThrow(() -> new NotFoundException("personne", id));
     }
 
     public void deleteById(Long aLong) {

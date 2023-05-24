@@ -9,9 +9,7 @@ import org.springframework.context.annotation.Configuration;
 
 import javax.annotation.PostConstruct;
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 @Configuration
 public class InitConfiguration {
@@ -30,7 +28,7 @@ public class InitConfiguration {
         this.equipeRepository.deleteAll();
         Personne p1 = this.personneRepository.save(new Personne("Doe","John", LocalDate.now()));
         Personne p2 = this.personneRepository.save(new Personne("Doe","Lea", LocalDate.now()));
-        Equipe e = this.equipeRepository.save(new Equipe("Equipe 1", "", List.of(p1,p2)));
+        Equipe e = this.equipeRepository.save(new Equipe("Equipe 1", "", Set.of(p1,p2)));
     }
 
 }
