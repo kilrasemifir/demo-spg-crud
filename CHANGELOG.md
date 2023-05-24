@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/kilrasemifir/demo-spg-crud/compare/v1.1.0...v1.2.0) (2023-05-24)
+
+
+### Features
+
+* ajout de swagger ([2bb2cf0](https://github.com/kilrasemifir/demo-spg-crud/commit/2bb2cf0b0ef8aad15cf7176ac29196c6b9069d04))
+
 ## 1.1.0 (2023-05-24)
 
 
