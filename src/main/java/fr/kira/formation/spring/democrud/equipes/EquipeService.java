@@ -10,6 +10,7 @@ import fr.kira.formation.spring.democrud.personnes.PersonneService;
 import fr.kira.formation.spring.democrud.personnes.dto.MinimalPersonneDTO;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -26,6 +27,7 @@ public class EquipeService {
         this.mapper = mapper;
     }
 
+    @Transactional(readOnly = true)
     public List<EquipeMinimalMembreDTO> findAll() {
         return repository.findAll().stream()
                 // equipe -> mapper.convertToEquipeMinimalMembre(equipe)
@@ -33,9 +35,21 @@ public class EquipeService {
                 .toList();// java15 et moins collect(Collectors.toList());
     }
 
+    @Transactional
+//    @Transactional(timeout = 1) pour l'exemple de Timeout
     public Equipe save(Equipe entity) {
         log.info("Sauvegarde d'une équipe. entity={}", entity);
-        return repository.save(entity);
+        Equipe result = repository.save(entity);
+        // Exemple de timeout
+//        try {
+//            Thread.sleep(10000);
+//        } catch (InterruptedException e) {
+//            log.warn("TO");
+//        }
+
+        // Pour l'exemple avec le rollback
+        // throw new RuntimeException("Erreur pour l'exemple");
+        return result;
     }
 
     public Equipe findById(Long id) {
