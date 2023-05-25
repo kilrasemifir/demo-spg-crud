@@ -2,9 +2,8 @@ package fr.kira.formation.spring.democrud;
 
 import fr.kira.formation.spring.democrud.equipes.Equipe;
 import fr.kira.formation.spring.democrud.equipes.EquipeRepository;
-import fr.kira.formation.spring.democrud.equipes.EquipeService;
-import fr.kira.formation.spring.democrud.personnes.Personne;
-import fr.kira.formation.spring.democrud.personnes.PersonneRepository;
+import fr.kira.formation.spring.democrud.personnes.model.Personne;
+import fr.kira.formation.spring.democrud.personnes.repositories.PersonneRepository;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
 

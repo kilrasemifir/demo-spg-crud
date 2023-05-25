@@ -1,4 +1,4 @@
-package fr.kira.formation.spring.democrud.personnes;
+package fr.kira.formation.spring.democrud.personnes.exceptions;
 
 import fr.kira.formation.spring.democrud.exceptions.NotFoundException;
 

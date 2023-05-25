@@ -1,15 +1,12 @@
 package fr.kira.formation.spring.democrud.equipes;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
-import fr.kira.formation.spring.democrud.personnes.Personne;
+import fr.kira.formation.spring.democrud.personnes.model.Personne;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
 import javax.persistence.*;
-import java.util.List;
 import java.util.Set;
 
 @Entity

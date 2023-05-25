@@ -12,4 +12,3 @@ logging:
   level:
     root: INFO
     fr.kira.formation.spring.democrud: DEBUG
-    fr.kira.formation.spring.democrud.personnes: TRACE

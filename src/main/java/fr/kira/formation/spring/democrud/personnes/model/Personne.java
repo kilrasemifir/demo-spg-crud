@@ -1,4 +1,4 @@
-package fr.kira.formation.spring.democrud.personnes;
+package fr.kira.formation.spring.democrud.personnes.model;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;

@@ -2,7 +2,7 @@ package fr.kira.formation.spring.democrud.personnes.dto.mapper;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import fr.kira.formation.spring.democrud.equipes.Equipe;
-import fr.kira.formation.spring.democrud.personnes.Personne;
+import fr.kira.formation.spring.democrud.personnes.model.Personne;
 import fr.kira.formation.spring.democrud.personnes.dto.MinimalPersonneDTO;
 import org.springframework.stereotype.Component;
 

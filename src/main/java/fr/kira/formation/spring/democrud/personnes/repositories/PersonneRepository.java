@@ -1,7 +1,7 @@
-package fr.kira.formation.spring.democrud.personnes;
+package fr.kira.formation.spring.democrud.personnes.repositories;
 
+import fr.kira.formation.spring.democrud.personnes.model.Personne;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.jpa.repository.Query;
 
 import java.time.LocalDate;
 import java.util.List;

@@ -1,5 +1,7 @@
 package fr.kira.formation.spring.democrud.entreprises;
 
+import fr.kira.formation.spring.democrud.entreprises.Entreprise;
+import fr.kira.formation.spring.democrud.entreprises.EntrepriseService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
