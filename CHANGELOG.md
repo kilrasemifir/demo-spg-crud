@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.4.0](https://github.com/kilrasemifir/demo-spg-crud/compare/v1.3.0...v1.4.0) (2023-05-25)
+
+
+### Features
+
+* ajout de transaction ([1d7b859](https://github.com/kilrasemifir/demo-spg-crud/commit/1d7b8597c6b4ac224721491262561d14f9a832d6))
+* refactor bonne pratiques ([3226d63](https://github.com/kilrasemifir/demo-spg-crud/commit/3226d634f5dd765a021628bee6ea248c12724d19))
+* utilisation de JDBC ([68ff893](https://github.com/kilrasemifir/demo-spg-crud/commit/68ff8930005d138119429d0775e2dfa153bb52e8))
+
 ## [1.3.0](https://github.com/kilrasemifir/demo-spg-crud/compare/v1.2.0...v1.3.0) (2023-05-24)
 
 
