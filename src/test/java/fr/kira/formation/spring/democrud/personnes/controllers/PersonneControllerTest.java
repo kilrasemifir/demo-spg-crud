@@ -69,5 +69,15 @@ class PersonneControllerTest {
                 );
     }
 
+    @Test
+    @DisplayName("Lors de la suppression d'un personne qui est sauvegarde, elle n'est plus disponible")
+    public void deleteById() throws Exception {
+        Personne personne = repository.save(new Personne("Doe","John", LocalDate.now()));
+        mvc.perform(delete("/personnes/"+personne.getId()))
+                .andExpect(status().is(204));
+        assertFalse(repository.existsById(personne.getId()));
+        // Ou
+        //assertTrue(repository.findById(personne.getId()).isEmpty());
+    }
 
 }
