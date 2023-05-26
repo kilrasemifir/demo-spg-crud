@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.5.0](https://github.com/kilrasemifir/demo-spg-crud/compare/v1.4.0...v1.5.0) (2023-05-26)
+
+
+### Features
+
+* ajout d'un test delete personne ([a4d0480](https://github.com/kilrasemifir/demo-spg-crud/commit/a4d04807b14c831cad6a33066fcf608d4ed37fa7))
+* ajout de spring security ([8d732a7](https://github.com/kilrasemifir/demo-spg-crud/commit/8d732a7828c8100574c67036ee6dbbf8489a6329))
+* ajout de tests ([599bb1f](https://github.com/kilrasemifir/demo-spg-crud/commit/599bb1f4680f20e7cd123c9cc91ab8cfbca3095a))
+
 ## [1.4.0](https://github.com/kilrasemifir/demo-spg-crud/compare/v1.3.0...v1.4.0) (2023-05-25)
 
 
