@@ -1,0 +1,4 @@
+# Configuration pour l'env de test
+#spring:
+#  datasource:
+#    url: jdbc:mysql//monip:3306/testdb

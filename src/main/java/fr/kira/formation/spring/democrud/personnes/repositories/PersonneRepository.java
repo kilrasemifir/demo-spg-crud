@@ -20,4 +20,6 @@ public interface PersonneRepository extends JpaRepository<Personne, Long> {
 //    List<Personne> custom(String nom);
     List<Personne> findByNomAndPrenomAndDateNaissanceBetween(
             String nom, String prenom, LocalDate before, LocalDate after);
+
+    boolean existsByNomAndPrenom(String nom, String prenom);
 }

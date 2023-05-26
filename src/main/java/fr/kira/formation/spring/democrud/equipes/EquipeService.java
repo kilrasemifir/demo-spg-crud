@@ -8,6 +8,7 @@ import fr.kira.formation.spring.democrud.equipes.exceptions.MembreNotFoundExcept
 import fr.kira.formation.spring.democrud.personnes.model.Personne;
 import fr.kira.formation.spring.democrud.personnes.services.PersonneService;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 

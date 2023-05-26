@@ -31,6 +31,10 @@ public class PersonneServiceImpl implements PersonneService {
 
     @Override
     public Personne save(Personne entity) {
+        if (this.personneRepository.existsByNomAndPrenom(
+                entity.getNom(), entity.getPrenom())) {
+            throw new RuntimeException();
+        }
         return personneRepository.save(entity);
     }
 
